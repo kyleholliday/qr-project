@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Project</title>
+</head>
+<body>
+  <h1>QR Scan Count: $<span id="scan-count">0</span>.00</h1>
+  <script>
+    document.getElementById('scan-count').textContent = 0;
+
+    const eventSource = new EventSource('/events');
+
+    eventSource.onmessage = function(event) {
+      document.getElementById('scan-count').textContent = event.data;
+    };
+
+    eventSource.onerror = (error) => {
+      console.error('SSE Error', error);
+    }
+  </script>
+</body>
+</html>
