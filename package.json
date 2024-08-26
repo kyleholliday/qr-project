@@ -1,5 +1,5 @@
 {
-  "name": "qr-project",
+  "name": "qr-project-2024",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -12,8 +12,6 @@
   "description": "",
   "dependencies": {
     "express": "^4.19.2",
-    "http": "^0.0.1-security",
-    "path": "^0.12.7",
-    "ws": "^8.18.0"
+    "path": "^0.12.7"
   }
 }
